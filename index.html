@@ -84,7 +84,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="RPC协议的定义"><a href="#RPC协议的定义" class="headerlink" title="RPC协议的定义"></a>RPC协议的定义</h2><p>RPC（Remote Procedure Call）—远程过程调用，它是一种通过网络从远程计算机程序上请求服务，<br>而不需要了解底层网络技术的协议。RPC协议假定某些传输协议的存在，如TCP或UDP，<br>为通信程序之间携带信息数据。在OSI网络通信模型中，RPC跨越了传输层和应用层。<br>RPC使得开发包括网络分布式多程序在内的应用程序更加容易。</p>
+        <h2 id="RPC协议的定义"><a href="#RPC协议的定义" class="headerlink" title="RPC协议的定义"></a>RPC协议的定义</h2><p>RPC（Remote Procedure Call）—远程过程调用，它是一种通过网络从远程计算机程序上请求服务，而不需要了解底层网络技术的协议。RPC协议假定某些传输协议的存在，如TCP或UDP，为通信程序之间携带信息数据。在OSI网络通信模型中，RPC跨越了传输层和应用层。RPC使得开发包括网络分布式多程序在内应用程序更加容易。</p>
 <ul>
 <li>简单的说，RPC就是从一台机器（客户端）上通过参数传递的方式调用另一台机器（服务器）<br>  上的一个函数或方法（可以统称为服务）并得到返回的结果</li>
 <li>RPC 会隐藏底层的通讯细节（不需要直接处理Socket通讯或Http通讯）</li>
@@ -103,9 +103,9 @@
 <li>Verifier 这是认证信息的验证值，这个字段也跟认证方式有关。<h2 id="RPC应答报文格式"><a href="#RPC应答报文格式" class="headerlink" title="RPC应答报文格式"></a>RPC应答报文格式</h2><img src="https://note.youdao.com/yws/res/262/WEBRESOURCEfde7222d8bc6608041977d253d581772" alt="rpcr.png"></li>
 <li>XID 这是RPC报文的编号，取值与请求报文中的XID一致，客户端靠这个字段分配应答消息对应哪次RPC请求。</li>
 <li>Message Type RPC消息类型，这里取值为1，表示应答消息。</li>
-<li>Reply State 是一个应答标志。当服务器端接收到RPC请求后会对报文格式进行检查，<br>  如果格式正确，是一个有效的RPC请求，则将Reply State设置为0，表示格式正确。</li>
-<li>Verifier 服务器端会解析RPC请求消息中的用户信息，对用户进行验证，根据结果填写Verifier字段，<br>  这个字段中包含了身份验证后的信息，这个字段和认证类型有关。</li>
-<li>Accept State 这个字段表示服务器是否可以处理一个RPC请求，假如服务器不支持NFS服务，<br>  那么当接收到一个Program为100003的RPC消息后，就会拒绝这个请求。如果服务器中包含RPC消息中请求的处理程序，<br>  则接收这个请求。0表示接收请求，其他值表示不接收请求。</li>
+<li>Reply State 是一个应答标志。当服务器端接收到RPC请求后会对报文格式进行检查，如果格式正确，是一个有效的RPC请求，则将Reply State设置为0，表示格式正确。</li>
+<li>Verifier 服务器端会解析RPC请求消息中的用户信息，对用户进行验证，根据结果填写Verifier字段，这个字段中包含了身份验证后的信息，这个字段和认证类型有关。</li>
+<li>Accept State 这个字段表示服务器是否可以处理一个RPC请求，假如服务器不支持NFS服务，那么当接收到一个Program为100003的RPC消息后，就会拒绝这个请求。如果服务器中包含RPC消息中请求的处理程序，则接收这个请求。0表示接收请求，其他值表示不接收请求。</li>
 </ul>
 <h2 id="RPC工作过程"><a href="#RPC工作过程" class="headerlink" title="RPC工作过程"></a>RPC工作过程</h2><p><img src="https://note.youdao.com/yws/res/273/WEBRESOURCE4f66d0bee5f93e3a5b6a7161715706a3" alt="123.png"></p>
 <ol>
@@ -119,14 +119,14 @@
 <li>client stub接收到消息，并进行解码；</li>
 <li>服务消费方得到最终结果。</li>
 </ol>
-<h2 id="net-rpc"><a href="#net-rpc" class="headerlink" title="net/rpc"></a>net/rpc</h2><p>Go官方提供了一个RPC库: net/rpc。包rpc提供了通过网络访问一个对象的方法的能力。服务器需要注册对象，<br>通过对象的类型名暴露这个服务。注册后这个对象的输出方法就可以远程调用，这个库封装了底层传输的细节，<br>包括序列化。服务器可以注册多个不同类型的对象，但是注册相同类型的多个对象的时候回出错。</p>
+<h2 id="net-rpc"><a href="#net-rpc" class="headerlink" title="net/rpc"></a>net/rpc</h2><p>Go官方提供了一个RPC库: net/rpc。包rpc提供了通过网络访问一个对象的方法的能力。服务器需要注册对象，通过对象的类型名暴露这个服务。注册后这个对象的输出方法就可以远程调用，这个库封装了底层传输的细节，包括序列化。服务器可以注册多个不同类型的对象，但是注册相同类型的多个对象的时候回出错。</p>
 <h3 id="声明服务"><a href="#声明服务" class="headerlink" title="声明服务"></a>声明服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">func (t *T) MethodName(argType T1, replyType *T2) error</span><br></pre></td></tr></table></figure>
 <h3 id="调用服务"><a href="#调用服务" class="headerlink" title="调用服务"></a>调用服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">err = client.Call(&quot;T.MethodName&quot;, T1, &amp;T2)</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/13/rpc协议/" data-id="cjs2w5lpa0004v03zfyguzd09" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/13/rpc协议/" data-id="cjs2xgh7s00056n3zkzei7jjw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/12/java-md/" data-id="cjs2w5lp70002v03zesmne2up" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/12/java-md/" data-id="cjs2xgh7o00036n3zgbuexben" class="article-share-link">Share</a>
       
       
     </footer>
@@ -188,7 +188,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/12/java初级/" data-id="cjs2w5lp80003v03zk92tb25p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/12/java初级/" data-id="cjs2xgh7q00046n3z8qluj216" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/23/hello-world/" data-id="cjs2w5lp60001v03zao3bxno4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/23/hello-world/" data-id="cjs2xgh7m00026n3z2ckzkeio" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/30/golang/" data-id="cjs2w5lp20000v03zbrp34aek" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/30/golang/" data-id="cjs2xgh7g00006n3zjbeyfj6w" class="article-share-link">Share</a>
       
       
     </footer>
