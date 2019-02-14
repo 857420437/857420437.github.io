@@ -330,12 +330,24 @@
                 
               
 
-              <time title="Created: 2019-02-13 15:37:41 / Modified: 17:29:49" itemprop="dateCreated datePublished" datetime="2019-02-13T15:37:41+08:00">2019-02-13</time>
+              <time title="Created: 2019-02-13 15:37:41" itemprop="dateCreated datePublished" datetime="2019-02-13T15:37:41+08:00">2019-02-13</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-02-14 10:13:48" itemprop="dateModified" datetime="2019-02-14T10:13:48+08:00">2019-02-14</time>
               
             
           </span>
@@ -387,7 +399,10 @@
 <li>Version 这是RPC程序版本。比如请求的是NFSV2，则这个字段为2。</li>
 <li>Procedure 这是RPC例程编号。比如请求删除一个文件，则这个字段为10。</li>
 <li>Credentials 这是包含了用户信息，供服务器进行验证。</li>
-<li>Verifier 这是认证信息的验证值，这个字段也跟认证方式有关。<h2 id="RPC应答报文格式"><a href="#RPC应答报文格式" class="headerlink" title="RPC应答报文格式"></a>RPC应答报文格式</h2><img src="https://note.youdao.com/yws/res/262/WEBRESOURCEfde7222d8bc6608041977d253d581772" alt="rpcr.png"></li>
+<li>Verifier 这是认证信息的验证值，这个字段也跟认证方式有关。</li>
+</ul>
+<h2 id="RPC应答报文格式"><a href="#RPC应答报文格式" class="headerlink" title="RPC应答报文格式"></a>RPC应答报文格式</h2><p><img src="https://note.youdao.com/yws/res/262/WEBRESOURCEfde7222d8bc6608041977d253d581772" alt="rpcr.png"></p>
+<ul>
 <li>XID 这是RPC报文的编号，取值与请求报文中的XID一致，客户端靠这个字段分配应答消息对应哪次RPC请求。</li>
 <li>Message Type RPC消息类型，这里取值为1，表示应答消息。</li>
 <li>Reply State 是一个应答标志。当服务器端接收到RPC请求后会对报文格式进行检查，如果格式正确，是一个有效的RPC请求，则将Reply State设置为0，表示格式正确。</li>
