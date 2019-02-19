@@ -96,24 +96,26 @@
 
 
 
-  <meta name="description" content="java…………HIIMHIMHMMHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:………….………..MMMI:MII:MIHMHMMMMMHMMMMIMMMIMMMMMMMMMMMMMM………….………:MMMI:M::HM::MIHHHM:IM:MHM:IMH:IMMMIIMMMHMMMH:………………..:MMMHHM::MMI:HH:MM:I:M:MMMH:IMH:IMM">
+  <meta name="description" content="mysql执行过程  存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。  过程 通过连接器连接到数据库上。   连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下： 1mysql -h $ip -P $port -u $user -p  查看缓存   建立连接之后，就可以执行s">
 <meta property="og:type" content="article">
-<meta property="og:title" content="walkbird的blog">
-<meta property="og:url" content="http://yoursite.com/2019/02/12/java初级/index.html">
+<meta property="og:title" content="mysql">
+<meta property="og:url" content="http://yoursite.com/2019/02/19/mysql/index.html">
 <meta property="og:site_name" content="walkbird的blog">
-<meta property="og:description" content="java…………HIIMHIMHMMHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:………….………..MMMI:MII:MIHMHMMMMMHMMMMIMMMIMMMMMMMMMMMMMM………….………:MMMI:M::HM::MIHHHM:IM:MHM:IMH:IMMMIIMMMHMMMH:………………..:MMMHHM::MMI:HH:MM:I:M:MMMH:IMH:IMM">
+<meta property="og:description" content="mysql执行过程  存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。  过程 通过连接器连接到数据库上。   连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下： 1mysql -h $ip -P $port -u $user -p  查看缓存   建立连接之后，就可以执行s">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-13T08:43:49.138Z">
+<meta property="og:image" content="http://yoursite.com/2019/02/19/mysql/mysql执行过程.png">
+<meta property="og:updated_time" content="2019-02-19T03:31:29.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="walkbird的blog">
-<meta name="twitter:description" content="java…………HIIMHIMHMMHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:………….………..MMMI:MII:MIHMHMMMMMHMMMMIMMMIMMMMMMMMMMMMMM………….………:MMMI:M::HM::MIHHHM:IM:MHM:IMH:IMMMIIMMMHMMMH:………………..:MMMHHM::MMI:HH:MM:I:M:MMMH:IMH:IMM">
+<meta name="twitter:title" content="mysql">
+<meta name="twitter:description" content="mysql执行过程  存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。  过程 通过连接器连接到数据库上。   连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下： 1mysql -h $ip -P $port -u $user -p  查看缓存   建立连接之后，就可以执行s">
+<meta name="twitter:image" content="http://yoursite.com/2019/02/19/mysql/mysql执行过程.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/12/java初级/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/19/mysql/">
 
 
 
@@ -123,7 +125,7 @@
   };
 </script>
 
-  <title> | walkbird的blog</title>
+  <title>mysql | walkbird的blog</title>
   
 
 
@@ -288,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/12/java初级/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/mysql/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="韩欣宇">
@@ -305,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">mysql
 
               
             
@@ -331,24 +333,12 @@
                 
               
 
-              <time title="Created: 2019-02-12 14:57:24" itemprop="dateCreated datePublished" datetime="2019-02-12T14:57:24+08:00">2019-02-12</time>
+              <time title="Created: 2019-02-19 10:50:44 / Modified: 11:31:29" itemprop="dateCreated datePublished" datetime="2019-02-19T10:50:44+08:00">2019-02-19</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-02-13 16:43:49" itemprop="dateModified" datetime="2019-02-13T16:43:49+08:00">2019-02-13</time>
               
             
           </span>
@@ -382,7 +372,21 @@
       
 
       
-        <h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><p>…………HIIMHIMHMMHMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:………….<br>………..MMMI:MII:MIHMHMMMMMHMMMMIMMMIMMMMMMMMMMMMMM………….<br>………:MMMI:M::HM::MIHHHM:IM:MHM:IMH:IMMMIIMMMHMMMH:…………<br>……..:MMMHHM::MMI:HH:MM:I:M:MMMH:IMH:IMM::MH:MM:MM:M…………<br>…….MMMMHMM:MMIMHMII:MM:IIIM:MHMIMMM:MMIIH::MH:HM:M…………<br>…… :MIMMMMMMMMMHMMHMM:HHMHMMMMIMHMMMMHMHMIHIHM::MMI…………<br>…….M:MMMMMMMMMMMMHMMMMMMMMHMMMMMMMMMMHMMMHMMIMHMMMM:………..<br>…….HHMMMMMMMMMMMMMMMMIMMMM.MMHMMMMHMMMMMMMMMMMIMHMMI………..<br>……..MMMIMMMMMMMMMMIHMIMIM:.M:HMM:MIHMMMMMMMMMMMMMMMI………..<br>……..MM.MMMMMMMMMMMH:MMMHM:.M.:MM.M.HMMMHMMMMMMMMMMMI………..<br>……..MM.MMMMMMMMMMH::M.M.M..M..MM:M.IIMH:MMMMMMMMMMMI………..<br>……..M:.MM:MMMMMMM:.I..:.I..H..IM:I.I.M.IMHMMMMMMMMMI………..<br>……..M..MMMHMMMMM.:HI:HHH……H….II..:MMMMMMMHMM:………..<br>………..MM.MIMMMM.:H: .::I…….. …:IH:.MMMMMM:MMI………..<br>………..:H..MMMIM.M.:…:I………: ..::HHHMMMMIMMMH………..<br>…………H..IMM:I:..I:..:……….I:..:I:::MMMMMMMMM………..<br>……………MMH::I…I:::……….III.I::MMMHMMMMMMM………..<br>…………..MMMHMII.. …………..:MI:I.HIIIHM:HMMMM………..<br>………….:MMMMIM::………..:……:H..:II:MHIMMMMM………..<br>………….MMMMMMMMM………………….I.MMMHHMMMMM:……….<br>…………MMMMH:MMMMM……..:.:………:MMMMMMMMMMMMI……….<br>………..MMMMMMHMMMMMMM.. ………….:MMMMMMMMMMMMMMM……….<br>…….. .IMMMMMMMMMMMMMMMM…………:MMMMMMMMMHMMMMMMM……….<br>……….MMMMMMMMMMMMMMMMMI:…….:IHMMMMMMMMM::MMMMMMM……….<br>………MMMMMMMIMMMMMMMMMMH:::I:I:.::HMMMMMMMMMHMMMMMMMMI………<br>……..HMMMMMMM:MMMMMMMMMMI:::::::..:HMMMMMMMMIMMMMMMMMMM………<br>…….IMMMMM..MI:MMMMMMMMM::::..:::::.MMMMMMMMMMMMMMMMMMM ……..<br>……:MMMM….:MMHMMMMMM:::::…..::.:.MMMMMMMHMMMMMMMMMM………<br>……MMI….:::IMMMMI:.:::::…..:I::::::HMMMHIM::::::MMMH……..<br>…..MM…..:::IMIMMM:…….:….::::::::IMMHMM:I:::I:::MM …….<br>….MMM…..:I:.MIHMMM……..:…:::::::HMMMMI:::::….::M:…….<br>…:MM:……..:MMMHMM………………IMMMMM::………..M…….<br>…MMM……..:::MMMMM……:……….:HMMMMM::……………….<br>..:MM:…….:::::MMMM……….. .. .::MMM:HM::………….:…..<br>..MMM……..:::::MMMMM:I..HHIMHMHHHM :IMMHIMH::………….I…..</p>
+        <h1 id="mysql执行过程"><a href="#mysql执行过程" class="headerlink" title="mysql执行过程"></a>mysql执行过程</h1><p><img src="/2019/02/19/mysql/mysql执行过程.png" alt="mysql执行过程" title="mysql"></p>
+<hr>
+<p>存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。</p>
+<hr>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ul>
+<li><p>通过连接器连接到数据库上。</p>
+<p>  连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h $ip -P $port -u $user -p</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看缓存</p>
+<p>  建立连接之后，就可以执行select语句了，执行过程就来到了第二步骤–查询缓存，查看之前是否被执行过这样的sql用缓存的结果来返回。</p>
+</li>
+<li><p>如果没有命中查询缓存，那就要开始执行sql语句了，语法分析</p>
+</li>
+</ul>
 
       
     </div>
@@ -413,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2019/02/14/springboot/" rel="next" title="springboot">
+                <i class="fa fa-chevron-left"></i> springboot
               </a>
             
           </div>
@@ -422,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/13/rpc协议/" rel="prev" title="rpc协议">
-                rpc协议 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -535,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java"><span class="nav-number">1.</span> <span class="nav-text">java</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql执行过程"><span class="nav-number">1.</span> <span class="nav-text">mysql执行过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">1.1.</span> <span class="nav-text">过程</span></a></li></ol></li></ol></div>
             
 
           </div>
