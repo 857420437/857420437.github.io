@@ -96,26 +96,24 @@
 
 
 
-  <meta name="description" content="mysql执行过程  存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。  一条查询语句执行过程 通过连接器连接到数据库上。   连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下： 1mysql -h $ip -P $port -u $user -p  查看缓存   建立连接之">
+  <meta name="description" content="一、函数的定义12func Add(v ...interface&amp;#123;&amp;#125;)&amp;#123;&amp;#125; 该函数定义，定义了一个可以接受任何数目，任何类型的函数。在一个变量后面加上三个点”…”，就表示从该变量处开始接受不定参数。如果类型不是interface{},而是某一确定类型，则为接受该类型的不定参数。 下面一个例子 ##1234567891011121314151617181920">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql">
-<meta property="og:url" content="http://yoursite.com/2019/02/19/mysql/index.html">
+<meta property="og:title" content="go语言不定参数">
+<meta property="og:url" content="http://yoursite.com/2019/03/12/go语言不定参数/index.html">
 <meta property="og:site_name" content="walkbird的blog">
-<meta property="og:description" content="mysql执行过程  存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。  一条查询语句执行过程 通过连接器连接到数据库上。   连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下： 1mysql -h $ip -P $port -u $user -p  查看缓存   建立连接之">
+<meta property="og:description" content="一、函数的定义12func Add(v ...interface&amp;#123;&amp;#125;)&amp;#123;&amp;#125; 该函数定义，定义了一个可以接受任何数目，任何类型的函数。在一个变量后面加上三个点”…”，就表示从该变量处开始接受不定参数。如果类型不是interface{},而是某一确定类型，则为接受该类型的不定参数。 下面一个例子 ##1234567891011121314151617181920">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/02/19/mysql/mysql执行过程.png">
-<meta property="og:updated_time" content="2019-02-19T06:59:11.590Z">
+<meta property="og:updated_time" content="2019-03-12T03:09:14.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql">
-<meta name="twitter:description" content="mysql执行过程  存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。  一条查询语句执行过程 通过连接器连接到数据库上。   连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下： 1mysql -h $ip -P $port -u $user -p  查看缓存   建立连接之">
-<meta name="twitter:image" content="http://yoursite.com/2019/02/19/mysql/mysql执行过程.png">
+<meta name="twitter:title" content="go语言不定参数">
+<meta name="twitter:description" content="一、函数的定义12func Add(v ...interface&amp;#123;&amp;#125;)&amp;#123;&amp;#125; 该函数定义，定义了一个可以接受任何数目，任何类型的函数。在一个变量后面加上三个点”…”，就表示从该变量处开始接受不定参数。如果类型不是interface{},而是某一确定类型，则为接受该类型的不定参数。 下面一个例子 ##1234567891011121314151617181920">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/19/mysql/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/12/go语言不定参数/">
 
 
 
@@ -125,7 +123,7 @@
   };
 </script>
 
-  <title>mysql | walkbird的blog</title>
+  <title>go语言不定参数 | walkbird的blog</title>
   
 
 
@@ -290,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/19/mysql/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/12/go语言不定参数/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="韩欣宇">
@@ -307,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mysql
+          <h1 class="post-title" itemprop="name headline">go语言不定参数
 
               
             
@@ -333,7 +331,7 @@
                 
               
 
-              <time title="Created: 2019-02-19 10:50:44 / Modified: 14:59:11" itemprop="dateCreated datePublished" datetime="2019-02-19T10:50:44+08:00">2019-02-19</time>
+              <time title="Created: 2019-03-12 11:01:46 / Modified: 11:09:14" itemprop="dateCreated datePublished" datetime="2019-03-12T11:01:46+08:00">2019-03-12</time>
             
 
             
@@ -372,27 +370,14 @@
       
 
       
-        <h1 id="mysql执行过程"><a href="#mysql执行过程" class="headerlink" title="mysql执行过程"></a>mysql执行过程</h1><p><img src="/2019/02/19/mysql/mysql执行过程.png" alt="mysql执行过程" title="mysql"></p>
+        <h1 id="一、函数的定义"><a href="#一、函数的定义" class="headerlink" title="一、函数的定义"></a>一、函数的定义</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Add</span><span class="params">(v ...<span class="keyword">interface</span>&#123;&#125;)</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该函数定义，定义了一个可以接受任何数目，任何类型的函数。在一个变量后面加上三个点”…”，就表示从该变量处开始接受不定参数。如果类型不是interface{},而是某一确定类型，则为接受该类型的不定参数。</p>
+<p>下面一个例子</p>
+<p>##<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">    <span class="string">"fmt"</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">不定参数函数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Add</span><span class="params">(a <span class="keyword">int</span>, args ...<span class="keyword">int</span>)</span> <span class="params">(result <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">    result += a</span><br><span class="line">    <span class="keyword">for</span> _, arg := <span class="keyword">range</span> args &#123;</span><br><span class="line">        result += arg</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    fmt.Println(Add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <hr>
-<p>存储引擎支持支持 InnoDB、MyISAM、Memory 等多个存储引擎，最常用的是innodb，从mysql5.5.5版本开始就是默认的存储引擎。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">任意类型的不定参数，用interface&#123;&#125;表示</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MyPrintf</span><span class="params">(args ...<span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> _, arg := <span class="keyword">range</span> args &#123; <span class="comment">//迭代不定参数</span></span><br><span class="line">        <span class="keyword">switch</span> arg.(<span class="keyword">type</span>) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="keyword">int</span>:</span><br><span class="line">            fmt.Println(arg, <span class="string">"is int"</span>)</span><br><span class="line">        <span class="keyword">case</span> <span class="keyword">string</span>:</span><br><span class="line">            fmt.Println(arg, <span class="string">"is string"</span>)</span><br><span class="line">        <span class="keyword">case</span> <span class="keyword">float64</span>:</span><br><span class="line">            fmt.Println(arg, <span class="string">"is float64"</span>)</span><br><span class="line">        <span class="keyword">case</span> <span class="keyword">bool</span>:</span><br><span class="line">            fmt.Println(arg, <span class="string">" is bool"</span>)</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            fmt.Println(<span class="string">"未知的类型"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">/*输出结果：</span></span><br><span class="line"><span class="comment">                12 is int</span></span><br><span class="line"><span class="comment">                haha is string</span></span><br><span class="line"><span class="comment">                12.5 is float64</span></span><br><span class="line"><span class="comment">                false  is bool</span></span><br><span class="line"><span class="comment">                -12.5 is float64</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    MyPrintf(<span class="number">12</span>, <span class="string">"haha"</span>, <span class="number">12.5</span>, <span class="literal">false</span>, <span class="number">-12.5</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="一条查询语句执行过程"><a href="#一条查询语句执行过程" class="headerlink" title="一条查询语句执行过程"></a>一条查询语句执行过程</h2><ul>
-<li><p>通过连接器连接到数据库上。</p>
-<p>  连接器负责跟客服端建立连接、获取权限、维持管理连接。连接的命令通常如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h $ip -P $port -u $user -p</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看缓存</p>
-<p>  建立连接之后，就可以执行select语句了，执行过程就来到了第二步骤–查询缓存，查看之前是否被执行过这样的sql用缓存的结果来返回。</p>
-</li>
-<li><p>如果没有命中查询缓存，那就要开始执行sql语句了，语法分析,识别出sql语句中每个字符串分别代表什么。</p>
-</li>
-<li><p>接下来语法没有错误之后，在经过优化器，优化器在表中有很多索引的时候决定使用哪个索引，或者在join的时候决定各个表的链接顺序。</p>
-</li>
-<li><p>优化之后就开始执行了，通过数据库引擎获取表的第一行，判断是否符合条件，不是就跳过，接着通过引擎取下一行，直到最后一行。最后讲将结果集返回。</p>
-</li>
-</ul>
-<hr>
-<h2 id="一条更新语句执行过程"><a href="#一条更新语句执行过程" class="headerlink" title="一条更新语句执行过程"></a>一条更新语句执行过程</h2>
+
       
     </div>
 
@@ -422,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/14/springboot/" rel="next" title="springboot">
-                <i class="fa fa-chevron-left"></i> springboot
+              <a href="/2019/03/07/跳表/" rel="next" title="跳表">
+                <i class="fa fa-chevron-left"></i> 跳表
               </a>
             
           </div>
@@ -431,10 +416,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/07/跳表/" rel="prev" title="跳表">
-                跳表 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -544,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql执行过程"><span class="nav-number">1.</span> <span class="nav-text">mysql执行过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一条查询语句执行过程"><span class="nav-number">1.1.</span> <span class="nav-text">一条查询语句执行过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一条更新语句执行过程"><span class="nav-number">1.2.</span> <span class="nav-text">一条更新语句执行过程</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、函数的定义"><span class="nav-number">1.</span> <span class="nav-text">一、函数的定义</span></a></li></ol></div>
             
 
           </div>
